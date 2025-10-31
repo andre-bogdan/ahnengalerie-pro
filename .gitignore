@@ -1,0 +1,11 @@
+.env
+writable/database/*.db
+writable/logs/*
+writable/session/*
+writable/cache/*
+writable/uploads/persons/*
+downloads/download-log.json
+downloads/*.zip
+vendor/
+.DS_Store
+Thumbs.db

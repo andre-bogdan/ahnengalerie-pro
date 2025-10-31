@@ -1,0 +1,19 @@
+# Verhindert Ausführung von PHP-Dateien im Upload-Verzeichnis
+<FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Nur bestimmte Dateitypen erlauben
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|pdf)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Directory Listing verhindern
+Options -Indexes
+
+# MIME-Type Sniffing verhindern
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
