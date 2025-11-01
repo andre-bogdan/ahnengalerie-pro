@@ -363,6 +363,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Main Navigation -->
                 <ul class="navbar-nav me-auto">
+                    <!-- Daxhboard -->
                     <li class="nav-item">
                         <a class="nav-link <?= uri_string() == 'dashboard' ? 'active' : '' ?>"
                             href="<?= base_url('dashboard') ?>">
@@ -370,6 +371,7 @@
                             Dashboard
                         </a>
                     </li>
+                    <!-- Personene -->
                     <li class="nav-item">
                         <a class="nav-link <?= strpos(uri_string(), 'persons') !== false && !strpos(uri_string(), 'tree') ? 'active' : '' ?>"
                             href="<?= base_url('persons') ?>">
@@ -377,6 +379,7 @@
                             Personen
                         </a>
                     </li>
+                    <!-- Stammbaum -->
                     <li class="nav-item">
                         <a class="nav-link <?= strpos(uri_string(), 'persons/tree') !== false ? 'active' : '' ?>"
                             href="<?= base_url('persons/tree') ?>">
@@ -384,6 +387,7 @@
                             Stammbaum
                         </a>
                     </li>
+                    <!-- Galerie -->
                     <li class="nav-item">
                         <a class="nav-link <?= strpos(uri_string(), 'photos') !== false ? 'active' : '' ?>"
                             href="<?= base_url('photos') ?>">
@@ -391,6 +395,7 @@
                             Galerie
                         </a>
                     </li>
+                    <!-- Statistik -->
                     <li class="nav-item">
                         <a class="nav-link <?= strpos(uri_string(), 'statistics') !== false ? 'active' : '' ?>"
                             href="<?= base_url('statistics') ?>">
@@ -398,7 +403,15 @@
                             Statistiken
                         </a>
                     </li>
-
+                    <!-- Export -->
+                    <li class="nav-item">
+                        <a class="nav-link <?= strpos(uri_string(), 'export') !== false ? 'active' : '' ?>"
+                            href="<?= base_url('export') ?>">
+                            <i class="bi bi-download"></i>
+                            Export
+                        </a>
+                    </li>
+                    <!-- nur fuer Admin -->
                     <?php if (session('is_admin')): ?>
                         <!-- Admin Divider (nur mobile) -->
                         <li class="d-lg-none">

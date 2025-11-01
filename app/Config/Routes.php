@@ -63,6 +63,10 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     // Statistics
     $routes->get('statistics', 'Statistics::index');
+
+    // Export
+    $routes->get('export', 'Export::index');
+    $routes->get('export/gedcom', 'Export::gedcom');
 });
 
 // ==========================================
