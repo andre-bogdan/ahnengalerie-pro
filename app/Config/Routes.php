@@ -67,6 +67,12 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     // Export
     $routes->get('export', 'Export::index');
     $routes->get('export/gedcom', 'Export::gedcom');
+
+    // CSV Export Routes
+    $routes->get('export/csv', 'Export::csv');
+    $routes->get('export/csv-relationships', 'Export::csvRelationships');
+    $routes->get('export/csv-events', 'Export::csvEvents');
+    $routes->get('export/csv-statistics', 'Export::csvStatistics');
 });
 
 // ==========================================

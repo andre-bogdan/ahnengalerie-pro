@@ -1,0 +1,113 @@
+{
+  "version": "1.0",
+  "language": "de",
+  "updated": "2025-10-13",
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Erste Schritte",
+      "icon": "bi-rocket-takeoff",
+      "description": "Grundlagen und Einstieg in Ahnengalerie Pro",
+      "articles": [
+        {
+          "slug": "erste-schritte",
+          "title": "Erste Schritte mit Ahnengalerie Pro",
+          "description": "Lernen Sie die Grundlagen kennen und legen Sie Ihren ersten Stammbaum an",
+          "difficulty": "beginner",
+          "readTime": "5 min"
+        }
+      ]
+    },
+    {
+      "id": "persons",
+      "title": "Personen verwalten",
+      "icon": "bi-people",
+      "description": "Personen anlegen, bearbeiten und organisieren",
+      "articles": [
+        {
+          "slug": "personen-anlegen",
+          "title": "Personen anlegen und bearbeiten",
+          "description": "So erfassen Sie Ihre Vorfahren mit allen wichtigen Informationen",
+          "difficulty": "beginner",
+          "readTime": "8 min"
+        }
+      ]
+    },
+    {
+      "id": "relationships",
+      "title": "Beziehungen",
+      "icon": "bi-bezier2",
+      "description": "Familiäre Verbindungen erstellen und pflegen",
+      "articles": [
+        {
+          "slug": "beziehungen",
+          "title": "Beziehungen verstehen und pflegen",
+          "description": "Verknüpfen Sie Personen und bauen Sie Ihren Stammbaum auf",
+          "difficulty": "intermediate",
+          "readTime": "10 min"
+        }
+      ]
+    },
+    {
+      "id": "photos",
+      "title": "Fotos & Medien",
+      "icon": "bi-camera",
+      "description": "Fotos hochladen und verwalten",
+      "articles": [
+        {
+          "slug": "fotos",
+          "title": "Fotos hochladen und verwalten",
+          "description": "Bewahren Sie historische Fotos und Dokumente für die Zukunft",
+          "difficulty": "beginner",
+          "readTime": "6 min"
+        }
+      ]
+    },
+    {
+      "id": "tree",
+      "title": "Stammbaum",
+      "icon": "bi-tree",
+      "description": "Visualisierung und Navigation",
+      "articles": [
+        {
+          "slug": "stammbaum",
+          "title": "Stammbaum-Visualisierung nutzen",
+          "description": "Navigieren Sie durch Ihren interaktiven Familienstammbaum",
+          "difficulty": "beginner",
+          "readTime": "7 min"
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "title": "Export & Backup",
+      "icon": "bi-download",
+      "description": "Daten exportieren und sichern",
+      "articles": [
+        {
+          "slug": "export",
+          "title": "Daten exportieren und sichern",
+          "description": "GEDCOM-Export und Backup-Strategien für Ihre wertvollen Familiendaten",
+          "difficulty": "beginner",
+          "readTime": "10 min",
+          "new": true
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Einstellungen",
+      "icon": "bi-gear",
+      "description": "Profil und Konto verwalten",
+      "articles": [
+        {
+          "slug": "profil-einstellungen",
+          "title": "Profil & Einstellungen",
+          "description": "Passen Sie Ihr Konto und Benachrichtigungen an Ihre Bedürfnisse an",
+          "difficulty": "beginner",
+          "readTime": "5 min"
+        }
+      ]
+    }
+  ]
+}

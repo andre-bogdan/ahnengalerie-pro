@@ -257,11 +257,27 @@
                             <tbody>
                                 <?php foreach ($recently_updated as $person): ?>
                                     <tr>
+                                        <!--
                                         <td>
                                             <strong><?= esc($person['first_name'] . ' ' . $person['last_name']) ?></strong>
                                             <span class="badge bg-info ms-2">
                                                 <i class="bi bi-pencil"></i> Geändert
                                             </span>
+                                        </td>
+                                        -->
+                                        <td>
+                                            <strong><?= esc($person['first_name'] . ' ' . $person['last_name']) ?></strong>
+                                            <?php if (!empty($person['updated_by_name'])): ?>
+                                                <span class="badge bg-info ms-2" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Zuletzt bearbeitet von <?= esc($person['updated_by_name']) ?> am <?= date('d.m.Y H:i', strtotime($person['updated_at'])) ?>">
+                                                    <i class="bi bi-pencil"></i>
+                                                    von <?= esc($person['updated_by_name']) ?>
+                                                </span>
+                                            <?php else: ?>
+                                                <span class="badge bg-info ms-2">
+                                                    <i class="bi bi-pencil"></i> Geändert
+                                                </span>
+                                            <?php endif; ?>
                                         </td>
                                         <td>
                                             <?= $person['birth_date'] ? date('d.m.Y', strtotime($person['birth_date'])) : '-' ?>
@@ -297,5 +313,15 @@
         </div>
     </div>
 <?php endif; ?>
+
+<?= $this->section('scripts') ?>
+<script>
+// Tooltips aktivieren
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+</script>
+<?= $this->endSection() ?>
 
 <?= $this->endSection() ?>

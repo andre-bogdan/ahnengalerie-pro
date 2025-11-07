@@ -223,30 +223,57 @@
                         <?= csrf_field() ?>
                         <input type="hidden" name="form_type" value="password">
 
+                         <!-- 1. Aktuelles Passwort -->
                         <div class="mb-3">
                             <label for="current_password" class="form-label">
                                 Aktuelles Passwort <span class="text-danger">*</span>
                             </label>
-                            <input type="password" class="form-control" id="current_password" name="current_password"
-                                required>
+                            <div class="password-container position-relative">
+                                <input type="password" class="form-control" id="current_password"
+                                    name="current_password" required>
+                                <button type="button"
+                                    class="toggle-password btn btn-link p-0 position-absolute top-50 end-0 translate-middle-y me-2"
+                                    onclick="togglePassword('current_password', this)" tabindex="-1"
+                                    aria-label="Passwort anzeigen/verbergen">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
                             <small class="text-muted">Zur Sicherheit: Geben Sie Ihr aktuelles Passwort ein</small>
                         </div>
 
+                        <!-- 2. Neues Passwort -->
                         <div class="mb-3">
                             <label for="new_password" class="form-label">
                                 Neues Passwort <span class="text-danger">*</span>
                             </label>
-                            <input type="password" class="form-control" id="new_password" name="new_password" required
-                                minlength="6">
+                            <div class="password-container position-relative">
+                                <input type="password" class="form-control" id="new_password" name="new_password"
+                                    required minlength="6">
+                                <button type="button"
+                                    class="toggle-password btn btn-link p-0 position-absolute top-50 end-0 translate-middle-y me-2"
+                                    onclick="togglePassword('new_password', this)" tabindex="-1"
+                                    aria-label="Passwort anzeigen/verbergen">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
                             <small class="text-muted">Mindestens 6 Zeichen</small>
                         </div>
 
+                        <!-- 3. Passwort bestätigen -->
                         <div class="mb-3">
                             <label for="new_password_confirm" class="form-label">
                                 Neues Passwort bestätigen <span class="text-danger">*</span>
                             </label>
-                            <input type="password" class="form-control" id="new_password_confirm"
-                                name="new_password_confirm" required>
+                            <div class="password-container position-relative">
+                                <input type="password" class="form-control" id="new_password_confirm"
+                                    name="new_password_confirm" required>
+                                <button type="button"
+                                    class="toggle-password btn btn-link p-0 position-absolute top-50 end-0 translate-middle-y me-2"
+                                    onclick="togglePassword('new_password_confirm', this)" tabindex="-1"
+                                    aria-label="Passwort anzeigen/verbergen">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
                             <small class="text-muted">Wiederholen Sie das neue Passwort</small>
                         </div>
 

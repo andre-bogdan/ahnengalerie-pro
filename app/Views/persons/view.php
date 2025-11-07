@@ -366,6 +366,12 @@
                                             *<?= date('Y', strtotime($child['birth_date'])) ?>
                                         <?php endif; ?>
                                     </small>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <small class="text-muted">
+                                        <?php if ($child['death_date']): ?>
+                                            &#8224;<?= date('Y', strtotime($child['death_date'])) ?>
+                                        <?php endif; ?>
+                                    </small>
                                 </div>
                                 <i class="bi bi-chevron-right"></i>
                             </div>

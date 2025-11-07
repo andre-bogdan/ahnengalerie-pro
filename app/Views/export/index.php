@@ -58,85 +58,170 @@
         </div>
     </div>
 
-    <!-- Weitere Export-Optionen (Zukunft) -->
+    <!-- CSV/Excel Export Card -->
     <div class="col-lg-6 mb-4">
         <div class="card h-100 border-0 shadow-sm">
-            <div class="card-header bg-secondary text-white">
+            <div class="card-header bg-success text-white">
                 <h5 class="mb-0">
-                    <i class="bi bi-journal-text me-2"></i>
-                    Weitere Export-Formate
+                    <i class="bi bi-file-earmark-spreadsheet me-2"></i>
+                    CSV/Excel Export
                 </h5>
             </div>
             <div class="card-body">
                 <p class="text-muted">
-                    Zusätzliche Export-Formate sind in Entwicklung und werden in zukünftigen
-                    Versionen verfügbar sein.
+                    Exportiere deine Daten als CSV-Dateien für Excel, LibreOffice oder Google Sheets.
+                    Perfekt für eigene Analysen, Listen und Übersichten.
                 </p>
 
-                <div class="list-group list-group-flush">
+                <div class="list-group list-group-flush mb-3">
+                    <!-- Personen CSV -->
                     <div class="list-group-item px-0">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="mb-1">
-                                    <i class="bi bi-file-earmark-pdf text-danger me-2"></i>
-                                    PDF Stammbuch
+                                    <i class="bi bi-people text-primary me-2"></i>
+                                    Personen-Liste
                                 </h6>
                                 <p class="mb-0 small text-muted">
-                                    Druckbares Familienbuch mit Fotos und Stammbäumen
+                                    Alle Personen mit Geburts-/Sterbedaten, Beruf und Statistiken
                                 </p>
                             </div>
-                            <span class="badge bg-warning text-dark">Geplant</span>
+                            <a href="<?= base_url('export/csv') ?>" class="btn btn-sm btn-outline-success">
+                                <i class="bi bi-download"></i>
+                            </a>
                         </div>
                     </div>
 
+                    <!-- Beziehungen CSV -->
                     <div class="list-group-item px-0">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="mb-1">
-                                    <i class="bi bi-file-earmark-spreadsheet text-success me-2"></i>
-                                    Excel/CSV Export
+                                    <i class="bi bi-diagram-3 text-info me-2"></i>
+                                    Beziehungen
                                 </h6>
                                 <p class="mb-0 small text-muted">
-                                    Tabellarische Übersicht aller Personen und Beziehungen
+                                    Alle familiären Verbindungen in tabellarischer Form
                                 </p>
                             </div>
-                            <span class="badge bg-warning text-dark">Geplant</span>
+                            <a href="<?= base_url('export/csv-relationships') ?>"
+                                class="btn btn-sm btn-outline-success">
+                                <i class="bi bi-download"></i>
+                            </a>
                         </div>
                     </div>
 
+                    <!-- Ereignisse CSV -->
                     <div class="list-group-item px-0">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="mb-1">
-                                    <i class="bi bi-file-earmark-code text-primary me-2"></i>
-                                    JSON/XML Export
+                                    <i class="bi bi-calendar-event text-warning me-2"></i>
+                                    Ereignisse/Timeline
                                 </h6>
                                 <p class="mb-0 small text-muted">
-                                    Strukturierte Daten für Entwickler und APIs
+                                    Chronologische Liste aller Lebensereignisse
                                 </p>
                             </div>
-                            <span class="badge bg-warning text-dark">Geplant</span>
+                            <a href="<?= base_url('export/csv-events') ?>" class="btn btn-sm btn-outline-success">
+                                <i class="bi bi-download"></i>
+                            </a>
                         </div>
                     </div>
 
+                    <!-- Statistik CSV -->
                     <div class="list-group-item px-0 border-0">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="mb-1">
-                                    <i class="bi bi-printer text-secondary me-2"></i>
-                                    Druckvorlagen
+                                    <i class="bi bi-graph-up text-success me-2"></i>
+                                    Statistik-Übersicht
                                 </h6>
                                 <p class="mb-0 small text-muted">
-                                    Ahnentafeln, Stammbaum-Poster, Personenblätter
+                                    Zusammenfassung und Analysen deiner Daten
                                 </p>
                             </div>
-                            <span class="badge bg-warning text-dark">Geplant</span>
+                            <a href="<?= base_url('export/csv-statistics') ?>" class="btn btn-sm btn-outline-success">
+                                <i class="bi bi-download"></i>
+                            </a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success alert-sm">
+                    <i class="bi bi-check-circle me-2"></i>
+                    CSV-Dateien können direkt in Excel geöffnet werden!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Weitere Export-Optionen (Zukunft) -->
+<div class="col-lg-6 mb-4">
+    <div class="card h-100 border-0 shadow-sm">
+        <div class="card-header bg-secondary text-white">
+            <h5 class="mb-0">
+                <i class="bi bi-journal-text me-2"></i>
+                Weitere Export-Formate
+            </h5>
+        </div>
+        <div class="card-body">
+            <p class="text-muted">
+                Zusätzliche Export-Formate sind in Entwicklung und werden in zukünftigen
+                Versionen verfügbar sein.
+            </p>
+
+            <div class="list-group list-group-flush">
+                <div class="list-group-item px-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">
+                                <i class="bi bi-file-earmark-pdf text-danger me-2"></i>
+                                PDF Stammbuch
+                            </h6>
+                            <p class="mb-0 small text-muted">
+                                Druckbares Familienbuch mit Fotos und Stammbäumen
+                            </p>
+                        </div>
+                        <span class="badge bg-warning text-dark">Geplant</span>
+                    </div>
+                </div>
+
+                <div class="list-group-item px-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">
+                                <i class="bi bi-file-earmark-code text-primary me-2"></i>
+                                JSON/XML Export
+                            </h6>
+                            <p class="mb-0 small text-muted">
+                                Strukturierte Daten für Entwickler und APIs
+                            </p>
+                        </div>
+                        <span class="badge bg-warning text-dark">Geplant</span>
+                    </div>
+                </div>
+
+                <div class="list-group-item px-0 border-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">
+                                <i class="bi bi-printer text-secondary me-2"></i>
+                                Druckvorlagen
+                            </h6>
+                            <p class="mb-0 small text-muted">
+                                Ahnentafeln, Stammbaum-Poster, Personenblätter
+                            </p>
+                        </div>
+                        <span class="badge bg-warning text-dark">Geplant</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- Backup Notice -->
@@ -164,23 +249,27 @@
 
 <?= $this->section('scripts') ?>
 <script>
-    // Optional: Download-Fortschritt anzeigen (für zukünftige große Exporte)
+    // Download-Fortschritt anzeigen
     document.addEventListener('DOMContentLoaded', function () {
-        const downloadBtn = document.querySelector('a[href*="export/gedcom"]');
-        if (downloadBtn) {
-            downloadBtn.addEventListener('click', function (e) {
-                // Zeige kurz einen Hinweis
-                const originalText = this.innerHTML;
-                this.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Export wird erstellt...';
-                this.classList.add('disabled');
+        // Alle Download-Links
+        const downloadLinks = document.querySelectorAll('a[href*="export/"]');
 
-                // Nach kurzer Zeit wieder zurücksetzen
-                setTimeout(() => {
-                    this.innerHTML = originalText;
-                    this.classList.remove('disabled');
-                }, 2000);
+        downloadLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Nur bei direkten Downloads
+                if (this.href.includes('csv') || this.href.includes('gedcom')) {
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = '<i class="bi bi-hourglass-split me-1"></i>Erstelle...';
+                    this.classList.add('disabled');
+
+                    // Nach kurzer Zeit zurücksetzen
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                        this.classList.remove('disabled');
+                    }, 2000);
+                }
             });
-        }
+        });
     });
 </script>
 <?= $this->endSection() ?>
