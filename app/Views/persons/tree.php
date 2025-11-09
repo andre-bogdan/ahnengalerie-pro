@@ -371,14 +371,12 @@ function renderNetwork() {
     network = new vis.Network(container, treeData, options);
     
     // Click-Event für Navigation
-    /*
     network.on('click', function(params) {
         if (params.nodes.length > 0) {
             const personId = params.nodes[0];
             window.location.href = '<?= base_url('persons/view') ?>/' + personId;
         }
     });
-    */
 }
 
 // Event Listeners

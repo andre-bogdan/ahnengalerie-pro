@@ -25,6 +25,7 @@ class PersonModel extends Model
         'occupation',
         'primary_photo_id',
         'created_by',
+        'updated_by',  // NEU!
         'updated_at'
     ];
 
@@ -47,4 +48,31 @@ class PersonModel extends Model
             'min_length' => 'Nachname muss mindestens 2 Zeichen lang sein.',
         ],
     ];
+    
+    // Callback: Automatisch updated_by setzen beim Update
+    protected $beforeUpdate = ['setUpdatedBy'];
+    
+    protected function setUpdatedBy(array $data)
+    {
+        // Nur wenn ein User eingeloggt ist
+        if (session()->has('user_id')) {
+            $data['data']['updated_by'] = session('user_id');
+        }
+        
+        return $data;
+    }
+    
+    // Callback: Automatisch created_by setzen beim Insert
+    protected $beforeInsert = ['setCreatedBy'];
+    
+    protected function setCreatedBy(array $data)
+    {
+        // Nur wenn ein User eingeloggt ist
+        if (session()->has('user_id')) {
+            $data['data']['created_by'] = session('user_id');
+            $data['data']['updated_by'] = session('user_id'); // Beim Erstellen auch updated_by setzen
+        }
+        
+        return $data;
+    }
 }

@@ -23,6 +23,15 @@ und dieses Projekt folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 ---
 
+## [1.4.0] - 2025-11-09
+
+### Fixed
+- Fehler in /app/Models/PersonModel.php
+- Fehler in /app/Models/PhotoModel.php
+- Fehler in der Versionierung -> 1.3.1 war ein Feature Update und hätte schon die 1.4. haben müssen
+
+---
+
 ## [1.3.1] - 2025-11-07
 
 ### Added
